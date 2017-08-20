@@ -22,7 +22,7 @@ export class ItemComponent {
   			.subscribe(resp=>{
           this.cod=parametros['id'];
   				this.producto=resp.json();
-  				console.log(this.producto);
+  				//console.log(this.producto);
   			})
   	});
    }
