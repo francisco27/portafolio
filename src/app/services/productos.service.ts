@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
+
+
 @Injectable()
 export class ProductosService {
 
@@ -9,6 +11,10 @@ export class ProductosService {
 
   constructor(public http:Http) {
   		this.cargar_productos();
+   }
+
+   public cargar_producto(cod:string){
+    return this.http.get(`https://angularweb-25598.firebaseio.com/productos/${ cod }.json`)
    }
 
    public cargar_productos(){
